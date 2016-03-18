@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<title>flex-navigation</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="header">
+		<h1>flex布局学习手册</h1>
+	</div>
+	<div class="play-flex">
+	    <h2>flex属性切换</h2>
+		<div id="container">
+			<div class="item item1">我不是item1我不是item1我不是item1我不是item1我不是item1我不是item1</div>
+			<div class="item">2</div>
+			<div class="item">3</div>
+			<div class="item">4444444</div>
+			<div class="item item2">5我是item2我是item2我是item2我是item2</div>
+			<div class="item">6</div>
+			<div class="item">7我是7我是7我是7</div>
+			<div class="item item1">8item1</div>
+			<div class="item">9</div>
+			<div class="item">10你全家都是9你全家都是9</div>
+		</div>
+		<h2 class="tips">TIPS:属性间需配合才能看到效果</h2>
+		<div class="wrap">
+			<p>容器属性</p>
+			<span>初始属性<code> flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;align-items: baseline;</code></span>
+			<div class="wrap-control">
+				<div>
+					<p>flex-direction</p>
+					<select class="flex-direction">
+						<option value="row">row</option>
+						<option value="row-reverse">row-reverse</option>
+						<option value="column">column</option>
+						<option value="column-reverse">column-reverse</option>
+					</select>
+				</div>
+				<div>
+					<p>flex-wrap</p>
+					<select class="flex-wrap">
+						<option value="nowrap">nowrap</option>
+						<option value="wrap">wrap</option>
+						<option value="wrap-reverse">wrap-reverse</option>
+					</select>
+				</div>
+				<div>
+					<p>justify-content</p>
+					<select class="justify-content">
+						<option value="flex-start">flex-start</option>
+						<option value="flex-end">flex-end</option>
+						<option value="center">center</option>
+						<option value="space-between">space-between</option>
+						<option value="space-around">space-around</option>
+					</select>
+				</div>
+				<div>
+					<p>align-items</p>
+					<select class="align-items">
+						<option value="baseline">baseline</option>
+						<option value="flex-start">flex-start</option>
+						<option value="flex-end">flex-end</option>
+						<option value="center">center</option>
+						<option value="stretch">stretch</option>
+					</select>
+				</div>
+				<div>
+					<p>align-content</p>
+					<!-- <select class="align-content">
+						<option value="stretch">stretch</option>
+						<option value="flex-start">flex-start</option>
+						<option value="flex-end">flex-end</option>
+						<option value="center">center</option>
+						<option value="space-between">space-between</option>
+						<option value="space-around">space-around</option>
+					</select> -->
+					<span>(该属性需两根主轴线，此处无法测试)</span>
+				</div>
+			</div>
+		</div>
+		<div class="wrap item1">
+			<p>项目属性</p>
+			<span>针对class名为item1的1,8</span>
+			<div class="wrap-control">
+				<div class="order">
+					<p>设置item1的order属性</p>
+					<input type="text" placeholder="输入数字即可">
+					<button>确定</button>
+				</div>
+				<div class="flex-grow">
+					<p>设置item1的flex-grow属性</p>
+					<input type="text" placeholder="输入数字即可">
+					<button>确定</button>
+				</div>
+				<div class="flex-shrink">
+					<p>设置item1的flex-shrink属性</p>
+					<input type="text" placeholder="输入数字即可">
+					<button>确定</button>
+				</div>
+				<div class="flex-basis">
+					<p>设置item1的flex-basis属性</p>
+					<input type="text" placeholder="默认值为auto，可填宽/高">
+					<button>确定</button>
+				</div>
+				<div>
+					<p>item1的align-self属性</p>
+					<select class="align-self">
+						<option value="auto">auto</option>
+						<option value="flex-start">flex-start</option>
+						<option value="flex-end">flex-end</option>
+						<option value="center">center</option>
+						<option value="center">baseline</option>
+						<option value="stretch">stretch</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="wrap item2">
+			<span>针对class名为item2的5</span>
+			<div class="wrap-control">
+				<div class="order">
+					<p>设置item2的order属性</p>
+					<input type="text" placeholder="输入数字即可">
+					<button>确定</button>
+				</div>
+				<div class="flex-grow">
+					<p>设置item2的flex-grow属性</p>
+					<input type="text" placeholder="输入数字即可">
+					<button>确定</button>
+				</div>
+				<div class="flex-shrink">
+					<p>设置item2的flex-shrink属性</p>
+					<input type="text" placeholder="输入数字即可">
+					<button>确定</button>
+				</div>
+				<div class="flex-basis">
+					<p>设置item2的flex-basis属性</p>
+					<input type="text" placeholder="默认值为auto，可填宽/高">
+					<button>确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="learn-flex">
+		<h2>flex参考手册</h2>
+		<div class="content">	
+			<div class="use">	
+				<p>flex布局的兼容性如图所示，另：微信内置浏览器和手机uc浏览器似乎不兼容~</p>
+				<img src="imgs/flexcaniuse.jpg" alt="flex can i use">
+			</div>
+			<p>*以下内容主要参考了阮一峰大神的:<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank">《Flex 布局教程：语法篇》</a></p>
+			<div class="basic">
+				<p>任何一个容器都可以指定为flex布局包括行内元素，设置为flex布局后，子元素的float，clear，vertical-align以及width在某些情况下将失效。</p>
+				<img src="imgs/axis.png" alt="flex axis">
+				<p>容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（crossaxis）。主轴的开始位置（与边框的交叉点）叫做mainstart，结束位置叫做mainend；交叉轴的开始位置叫做cross start，结束位置叫做crossend。项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。<em>轴跟容器align-content属性有关</em></p>
+			</div>
+			<div class="intro-container">
+				<ul>
+					<p>容器有以下六个属性</p>
+					<li>
+						<dt>flex-direction: <em>row</em> | row-reverse | column | column-reverse;</dt>
+						<dd>决定主轴的方向（即项目的排列方向）。</dd>
+					</li>
+					<li>
+						<dt>flex-wrap: <em>nowrap</em> | wrap | wrap-reverse;</dt>
+						<dd>定义，如果一条轴线排不下，如何换行。</dd>
+					</li>
+					<li>	
+						<dt>flex-flow: <em>row nowrap</em></dt>
+						<dd>为flex-direction和flex-wrap的缩写</dd>
+					</li>
+					<li>
+						<dt>justify-content: <em>flex-start</em> | flex-end | center | space-between | space-around;</dt>
+						<dd>定义了项目在主轴上的对齐方式。</dd>
+					</li>
+					<li>
+						<dt>align-items: <em>flex-start</em> | flex-end | center | baseline | stretch;</dt>
+						<dd>定义项目在交叉轴上如何对齐。</dd>
+					</li>
+					<li>
+						<dt>align-content: <em>flex-start</em> | flex-end | center | space-between | space-around | stretch;</dt>
+						<dd>定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。</dd>
+					</li>
+				</ul>
+				<ul>
+					<p>项目有以下六个属性</p>
+					<li>
+						<dt>order: <em>0</em></dt>
+						<dd>定义项目的排列顺序。数值越小，排列越靠前，默认为0。</dd>
+					</li>
+					<li>
+						<dt>flex-grow: <em>0</em></dt>
+						<dd>定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。</dd>
+					</li>
+					<li>
+						<dt>flex-shrink: <em>1</em></dt>
+						<dd>定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</dd>
+					</li>
+					<li>
+						<dt>flex-basis:<em>auto</em> | length</dt>
+						<dd>定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。</dd>
+					</li>
+					<li>
+						<dt>flex:<em>0 1 auto</em></dt>
+						<dd>为flex-grow,flex-shrink和flex-basis的简写</dd>
+					</li>
+					<li>
+						<dt>align-self: <em>auto</em>| flex-start | flex-end | center | baseline | stretch;</dt>
+						<dd>允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的alignitems属性，如果没有父元素，则等同于stretch。</dd>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<footer>
+		&copy;2016
+		<span><a href="http://weibo.com/leshiv5" target="_blank">weibo</a></span>
+		<span class="git"><a href="https://github.com/leeween" target="_blank">github</a></span>
+	</footer>
+	<script src="js/jquery-2.2.1.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

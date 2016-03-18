@@ -1,0 +1,112 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: #345678;
+}
+#container {
+  display: flex;
+  width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+.item {
+  width: 100px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: #c2c2c2;
+}
+code {
+  background-color: #c2c2c2;
+  color: #fff;
+  font-size: 16px;
+}
+.tips {
+  font-size: 22px;
+}
+.wrap {
+  margin-top: 20px;
+  text-align: center;
+}
+.wrap > p {
+  font-size: 22px;
+  color: #876543;
+}
+.wrap-control {
+  display: flex;
+}
+.wrap-control > div {
+  width: 20%;
+  text-align: center;
+}
+.learn-flex {
+  margin-top: 50px;
+  padding-bottom: 80px;
+}
+.learn-flex h2 {
+  text-align: center;
+  color: #345678;
+}
+.learn-flex .content {
+  width: 1200px;
+  margin: 0 auto;
+}
+.learn-flex .use img {
+  display: block;
+  width: 100%;
+}
+.learn-flex .basic img {
+  display: block;
+  margin: 0 auto;
+}
+.learn-flex em {
+  font-style: normal;
+  color: #876543;
+}
+.play-flex h2 {
+  text-align: center;
+  color: #345678;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #345678;
+  line-height: 50px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  color: #ccc;
+}
+footer span {
+  float: right;
+  position: relative;
+  padding-left: 30px;
+  margin-right: 20px;
+}
+footer span:before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url(../imgs/weibo.png) no-repeat;
+}
+footer span a {
+  color: #ccc;
+}
+footer .git:before {
+  background: url(../imgs/git.png) no-repeat;
+}
